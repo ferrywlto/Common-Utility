@@ -1,0 +1,5 @@
+﻿SEND D:\dealer\b_1.txt
+SEND D:\dealer\b_2.txt
+SEND D:\dealer\b_3.txt
+SEND D:\dealer\script.bat
+RUN

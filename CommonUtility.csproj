@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8001F23E-386D-4EC5-A0E0-32FFE26D95D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Verdant.Code</RootNamespace>
+    <AssemblyName>com.verdant.code</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Automation\AutomationTask.cs" />
+    <Compile Include="Automation\AutomationTaskParameter.cs" />
+    <Compile Include="Automation\DownloadTask.cs" />
+    <Compile Include="Automation\DownloadTaskParameter.cs" />
+    <Compile Include="Automation\ExecuteTask.cs" />
+    <Compile Include="Automation\ExecuteTaskParameter.cs" />
+    <Compile Include="Automation\ITaskObserver.cs" />
+    <Compile Include="Automation\KillTask.cs" />
+    <Compile Include="Automation\Patcher.cs" />
+    <Compile Include="Automation\SQLTask.cs" />
+    <Compile Include="Automation\SQLTaskParameter.cs" />
+    <Compile Include="Automation\StressTestReceiver.cs" />
+    <Compile Include="Automation\StressTestSender.cs" />
+    <Compile Include="Automation\UploadTask.cs" />
+    <Compile Include="Automation\UploadTaskParameter.cs" />
+    <Compile Include="Database\BaccaratStoredProcedureLocator.cs" />
+    <Compile Include="Database\DatabaseExtractor.cs" />
+    <Compile Include="Database\DatabaseExtractor.Designer.cs">
+      <DependentUpon>DatabaseExtractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\ConfigForm.cs" />
+    <Compile Include="Database\ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\MainForm.cs" />
+    <Compile Include="Database\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseRestorer.cs" />
+    <Compile Include="Database\DatabaseRestorer.Designer.cs">
+      <DependentUpon>DatabaseRestorer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulator\DealingController.cs" />
+    <Compile Include="Emulator\DealingControllerConfig.cs" />
+    <Compile Include="Emulator\DealingController_Barcode.cs" />
+    <Compile Include="Emulator\DealingController_Barcode.designer.cs">
+      <DependentUpon>DealingController_Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulator\DealingController_CV.cs" />
+    <Compile Include="Emulator\DealingController_CV.Designer.cs">
+      <DependentUpon>DealingController_CV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulator\DebugForm.cs" />
+    <Compile Include="Emulator\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulator\EmulatorBase.cs" />
+    <Compile Include="Emulator\EmulatorClient.cs" />
+    <Compile Include="Emulator\EmulatorClientBaccarat.cs" />
+    <Compile Include="Emulator\EmulatorClientSicbo.cs" />
+    <Compile Include="Emulator\EmulatorDealer.cs" />
+    <Compile Include="Emulator\EmulatorDealerBaccarat.cs" />
+    <Compile Include="Emulator\EmulatorDealerSicbo.cs" />
+    <Compile Include="Emulator\SicboController.cs" />
+    <Compile Include="Logging\ConsoleLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AESStringEncryptor.cs" />
+    <Compile Include="Security\AES_EncryptionApp.cs" />
+    <Compile Include="Security\AES_EncryptionApp.Designer.cs">
+      <DependentUpon>AES_EncryptionApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\TripleDESSample.cs" />
+    <Compile Include="System\Buzzer.cs" />
+    <Compile Include="Utility\PPCaller.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Automation\Patcher.App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Automation\StressTestSender.App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Emulator\DealingController.App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Emulator\EmulatorClient_Baccarat_app.config" />
+    <None Include="Emulator\EmulatorClient_Sicbo_App.config" />
+    <None Include="Emulator\EmulatorDealer_Baccarat_app.config" />
+    <None Include="Emulator\EmulatorDealer_Sicbo_App.config" />
+    <None Include="Emulator\SicboController.App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Database\ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Database\DatabaseRestorer.resx">
+      <DependentUpon>DatabaseRestorer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulator\DealingController_Barcode.resx">
+      <DependentUpon>DealingController_Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulator\DealingController_CV.resx">
+      <DependentUpon>DealingController_CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emulator\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\AES_EncryptionApp.resx">
+      <DependentUpon>AES_EncryptionApp.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Automation\deploy.txt" />
+    <Content Include="Automation\job.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
